@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay Text On An Image</title>
+    <style>
+          *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+          }
+          body{
+            background-color: #689fb3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 60px 0px;
+          }
+          .card{
+           position: relative;
+           width: 325px;
+           height: 425px;
+           margin: 20px;
+           border-radius:10px;
+           overflow: hidden;
+           box-shadow: 0 0 12px #ccc ;
+          }
+          .card img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+          }
+          .card img:hover{
+            transform: scale(1.2);
+
+          }
+          .overlay{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.6);
+            color: #fff;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: 0.5s ease;
+          }
+          .card:hover .overlay{
+            transform: translateY(0%);
+          }
+          .overlay h2{
+            font-size: 30px;
+            margin-top: 0px;
+          }
+          .overlay p{
+            margin: 10px 0px;
+          }
+          .overlay button{
+            background-color: #fff;
+            color: #000;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.5s ease;
+          }
+          .overlay button:hover{
+            background-color: #fff;
+            color: #000; 
+          }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./sky.jpg" alt="">
+        <div class="overlay">
+            <h2>Card Title</h2>
+            <p>This a a simple card description</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>
